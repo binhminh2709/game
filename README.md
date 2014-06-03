@@ -1,4 +1,6 @@
 game
 ====
-Mô hình phát triển game.
-1. Add Module Server 02/06/2014
+Mô hình phát triển game. Bao gồm các module
+1. Module Server
+2. Module Library.
+3. 

@@ -13,15 +13,23 @@ import org.codehaus.jackson.JsonParser;
 import org.codehaus.jackson.map.MappingJsonFactory;
 
 public class JSONReader {
+  
   private InputStream is ;
   private JsonParser parser ;
 
   public JSONReader(String file) throws Exception {
     this(file, file.endsWith(".gzip")) ;
+    /**
+     * JSONReader(File stringFile, boolean compress). 
+     * compress: nén, ép
+     * */
   }
 
   public JSONReader(String file, boolean compress) throws Exception {
     if(compress) {
+      /**
+       * Creates a new input stream with a default buffer size.
+       * */
       init(new GZIPInputStream(new FileInputStream(file))) ;
     } else {
       init(new FileInputStream(file)) ;
@@ -33,6 +41,7 @@ public class JSONReader {
   }
 
   private void init(InputStream is) throws Exception {
+    
     this.is  = is ;
     MappingJsonFactory factory = new MappingJsonFactory();
     JSONSerializer.configure(factory.getCodec()) ;
