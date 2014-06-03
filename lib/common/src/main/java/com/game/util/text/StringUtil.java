@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class StringUtil {
+  
   final static public  Charset UTF8 = Charset.forName("UTF-8") ;
   final static public  String[] EMPTY_ARRAY = {} ;
   final static public  String SEPARATOR = "," ; 
@@ -39,8 +40,6 @@ public class StringUtil {
     }
     return b.toString() ;
   }
-  
-  
   
   final static public String joinStringCollection(Collection<String> collection, String separator) {
     if(collection == null) return null ;
